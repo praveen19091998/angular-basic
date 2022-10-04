@@ -1,0 +1,34 @@
+  <!-- Ngif using interpolution 
+    <div *ngIf="userlogin" style="background-color:red;">
+      <div [innerHTML]="userObject1.firstName"></div>
+
+      <div [text.color]="textColorVal"> {{title}} </div> -->
+
+        
+  <!-- ngfor using interpollution  
+ <div *ngFor="contact of contact">
+  {{contact.firstname}} {{contact.lastname}} {{contact.contactid}}
+ </div>
+   -->
+
+ <table>
+  <th style="color:red;">contactid</th>
+  <th style="color:red">firstname</th>
+  <th style="color: red">lastname</th>
+  <tr *ngFor="let contact of contact">
+    <td>{{contact.contactid}}</td>
+    <td>{{contact.firstname}}</td>
+    <td>{{contact.lastname}}</td>
+  </tr>
+</table>
+          
+<!-- event binding -->
+
+<button (click)="sayhello( )">click button</button>
+<br> 
+<div (mouseover)="hibro(1,3,4 )">fefef</div>
+
+<!--two way databinding -->
+
+<input [(ngModel)]="username"/>
+<div >{{username}}</div>
